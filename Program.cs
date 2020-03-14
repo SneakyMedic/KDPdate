@@ -11,6 +11,7 @@ namespace KDPdate
 {
     public class Program
     {
+        public static string url = "http://localhost:1535";public static string wwwurl = "http://www.localhost:1535";
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
@@ -20,7 +21,7 @@ namespace KDPdate
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>().UseUrls("http://meowcat.tk:1535");
+                    webBuilder.UseStartup<Startup>().UseUrls(url);
                 });
     }
 }

@@ -29,8 +29,8 @@ namespace KDPdate
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://meowcat.tk:1535",
-                                        "http://www.meowcat.tk:1535").AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    builder.WithOrigins(Program.url,
+                                        Program.wwwurl).AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                 });
             });
             services.AddControllers();
