@@ -20,7 +20,7 @@ namespace KDPdate
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>().UseUrls("http://localhost:1535");
+                    webBuilder.UseStartup<Startup>().UseUrls("http://meowcat.tk:1535");
                 });
     }
 }
