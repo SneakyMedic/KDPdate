@@ -29,6 +29,33 @@ namespace KDPdate.Controllers
                 case "day":
                     ret = DateTime.Today.DayOfWeek.ToString();
                     break;
+                case "nwday":
+                    var day = DateTime.Today.DayOfWeek;
+                    switch(day)
+                    {
+                        case DayOfWeek.Monday:
+                            ret = "1";
+                            break;
+                        case DayOfWeek.Tuesday:
+                            ret = "2";
+                            break;
+                        case DayOfWeek.Wednesday:
+                            ret = "3";
+                            break;
+                        case DayOfWeek.Thursday:
+                            ret = "4";
+                            break;
+                        case DayOfWeek.Friday:
+                            ret = "5";
+                            break;
+                        case DayOfWeek.Saturday:
+                            ret = "6";
+                            break;
+                        default:
+                            ret = "7";
+                            break;
+                    }
+                    break;
                 default:
                     break;
             }
